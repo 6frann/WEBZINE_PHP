@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boulunpeu - Press Kit 2023-2024</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .bg-image-left {
+            background-image: url('./article/images/boul1peu.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+        }
+
+        .bg-image-right {
+            background-image: url('./article/images/boul1peu.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .fade-in {
+            animation: fadeIn 1.5s ease-in forwards;
+        }
+
+        .slide-up {
+            animation: slideUp 1s ease-out forwards;
+            animation-delay: 0.5s;
+            opacity: 0;
+        }
+
+        .enter-site-btn {
+            transition: all 0.3s ease;
+        }
+
+        .enter-site-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-black">
+    <!-- Image gauche -->
+    <div class="fixed left-0 top-0 w-1/2 h-screen bg-image-left">
+        <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+    </div>
+
+    <!-- Image droite -->
+    <div class="fixed right-0 top-0 w-1/2 h-screen bg-image-right">
+        <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+    </div>
+
+    <!-- Contenu central -->
+    <div class="relative z-10 min-h-screen flex items-center justify-center">
+        <div class="container mx-auto px-4 text-center">
+            <div class="max-w-4xl mx-auto fade-in">
+                <div class="slide-up backdrop-blur-sm bg-black/30 p-12 rounded-2xl">
+                    <h1 class="text-white text-6xl md:text-8xl font-bold mb-6">BOULUNPEU</h1>
+                    <p class="text-gray-300 text-2xl md:text-3xl mb-12">ACTU RAP</p>
+                    
+                    <a href="index.html" class="enter-site-btn inline-block bg-white text-black px-8 py-4 rounded-full text-lg font-medium hover:bg-gray-100">
+                        Entrer sur le site
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 
