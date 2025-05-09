@@ -1,0 +1,15 @@
+# Laravel
+/vendor/
+/node_modules/
+/public/storage
+.env
+.env.*
+.idea
+.vscode
+*.log
+*.cache
+*.bak
+*.swp
+
+# macOS
+.DS_Store
