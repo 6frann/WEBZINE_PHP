@@ -23,4 +23,5 @@ Route::group(['prefix' => 'admin'], function () {
 });
 
 Route::get('/articles',[ArticleController::class,'index']);
+Route::get('/articles/{slug}', [ArticleController::class, 'show'])->name('test2');
 

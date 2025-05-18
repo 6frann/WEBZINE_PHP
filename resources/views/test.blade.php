@@ -9,7 +9,7 @@
     <body>
         @foreach ($articles as $article)
         <div>
-            <h2>{{ $article->title }}</h2>
+            <h2> <a href="{{ route('test2', $article->slug) }}">{{ $article->title }}</a> </h2>
         </div>
     @endforeach
     </body>
