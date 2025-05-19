@@ -1,5 +1,6 @@
 <?php
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\VideoController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,4 +25,7 @@ Route::group(['prefix' => 'admin'], function () {
 
 Route::get('/articles',[ArticleController::class,'index']);
 Route::get('/articles/{slug}', [ArticleController::class, 'show'])->name('test2');
+
+Route::get('/videos', [VideoController::class,'index']);
+Route::get('/videos/{slug}', [VideoController::class,'show'])->name('test3');
 
