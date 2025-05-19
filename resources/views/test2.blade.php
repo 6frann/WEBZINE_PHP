@@ -9,12 +9,12 @@
 <body>
     <h1>{{$article->title}}</h1>
     <p>{{ strip_tags(html_entity_decode($article->content)) }}</p>
-    {{-- <p>{{$article->category->name}}</p>
+    <p>{{$article->category->name}}</p>
     <p>{{$article->author->name}}</p>
 
     @foreach ($article->tags as $tag)
     <span>{{ $tag->name }}</span>
-    @endforeach --}}
+    @endforeach
     <img src="{{ $article->image }}" alt="Capture-d-e-cran-2025-05-15-a-19-49-09" border="0">
 </body>
 </html>
