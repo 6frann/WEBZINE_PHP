@@ -1,5 +1,5 @@
 <?php
-use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\VideoController;
 use Illuminate\Support\Facades\Route;
 
@@ -14,18 +14,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
 
-Route::get('/articles',[ArticleController::class,'index']);
-Route::get('/articles/{slug}', [ArticleController::class, 'show'])->name('test2');
+Route::get('/articles',[HomeController::class,'index']);
+// Route::get('/articles/{slug}', [ArticleController::class, 'show'])->name('test2');
 
-Route::get('/videos', [VideoController::class,'index']);
-Route::get('/videos/{slug}', [VideoController::class,'show'])->name('test3');
+// Route::get('/videos', [VideoController::class,'index']);
+// Route::get('/videos/{slug}', [VideoController::class,'show'])->name('test3');
 

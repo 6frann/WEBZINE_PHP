@@ -37,7 +37,7 @@
     @include('templates.partials._main')
 
     {{-- footer --}}
-    @include('templates.partials.footer')
+    @include('templates.partials._footer')
     
     <script>
         function toggleSearch() {
