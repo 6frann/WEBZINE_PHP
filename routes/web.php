@@ -24,9 +24,9 @@ Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
 
-Route::get('/home',[HomeController::class,'index']);
+Route::get('/accueil',[HomeController::class,'index']);
 
-Route::get('/articles',[ArticleController::class,'index']);
+Route::get('/actualites',[ArticleController::class,'index']);
 // Route::get('/articles/{slug}', [ArticleController::class, 'show'])->name('test2');
 
 // Route::get('/videos', [VideoController::class,'index']);
