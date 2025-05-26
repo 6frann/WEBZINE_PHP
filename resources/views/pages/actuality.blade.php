@@ -234,95 +234,22 @@
             <!-- Grille d'articles -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Article 1 -->
-                <article class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-                    <img src="article/images/nekfeu-album.jpg" alt="Nekfeu nouvel album" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <div class="flex items-center text-sm text-gray-500 mb-2">
-                            <span>15 Mars 2024</span>
-                            <span class="mx-2">•</span>
-                            <span>Par Jean Dupont</span>
+                @foreach ($articles as $article)
+                    <article class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                        <img src="{{$article->image}}" alt="Nekfeu nouvel album" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <div class="flex items-center text-sm text-gray-500 mb-2">
+                                <span>{{$article->created_at->format('d M Y')}}</span>
+                                <span class="mx-2">•</span>
+                                <span>{{$article->author->name}}</span>
+                            </div>
+                            <h2 class="text-xl font-bold text-primary mb-2">{{$article->title}}</h2>
+                            <p class="text-gray-600 mb-4">{{ Str::limit(strip_tags(html_entity_decode($article->content)), 100) }}</p>
+                            <a href="article.html" class="text-accent font-medium hover:text-accent/80">Lire la suite →</a>
                         </div>
-                        <h2 class="text-xl font-bold text-primary mb-2">Nekfeu dévoile son nouvel album "Les Étoiles Vagabondes"</h2>
-                        <p class="text-gray-600 mb-4">Le rappeur français annonce la sortie de son quatrième album studio, prévu pour le printemps 2024.</p>
-                        <a href="article.html" class="text-accent font-medium hover:text-accent/80">Lire la suite →</a>
-                    </div>
-                </article>
-
-                <!-- Article 2 -->
-                <article class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-                    <img src="article/images/sch-album.jpg" alt="SCH nouvel album" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <div class="flex items-center text-sm text-gray-500 mb-2">
-                            <span>12 Mars 2024</span>
-                            <span class="mx-2">•</span>
-                            <span>Par Marie Martin</span>
-                        </div>
-                        <h2 class="text-xl font-bold text-primary mb-2">SCH annonce une tournée européenne</h2>
-                        <p class="text-gray-600 mb-4">Le rappeur marseillais partira en tournée dans toute l'Europe à partir de juin 2024.</p>
-                        <a href="article.html" class="text-accent font-medium hover:text-accent/80">Lire la suite →</a>
-                    </div>
-                </article>
-
-                <!-- Article 3 -->
-                <article class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-                    <img src="article/images/laylow-interview.jpg" alt="Laylow interview" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <div class="flex items-center text-sm text-gray-500 mb-2">
-                            <span>10 Mars 2024</span>
-                            <span class="mx-2">•</span>
-                            <span>Par Pierre Durand</span>
-                        </div>
-                        <h2 class="text-xl font-bold text-primary mb-2">Laylow : "Mon prochain album sera plus personnel"</h2>
-                        <p class="text-gray-600 mb-4">Dans une interview exclusive, le rappeur toulousain nous parle de ses projets à venir.</p>
-                        <a href="article.html" class="text-accent font-medium hover:text-accent/80">Lire la suite →</a>
-                    </div>
-                </article>
-
-                <!-- Article 4 -->
-                <article class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-                    <img src="article/images/booba-concert.jpg" alt="Booba concert" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <div class="flex items-center text-sm text-gray-500 mb-2">
-                            <span>8 Mars 2024</span>
-                            <span class="mx-2">•</span>
-                            <span>Par Sophie Bernard</span>
-                        </div>
-                        <h2 class="text-xl font-bold text-primary mb-2">Booba annonce un concert exceptionnel à Paris</h2>
-                        <p class="text-gray-600 mb-4">Le Duc de Boulogne se produira à l'Accor Arena le 15 juin 2024.</p>
-                        <a href="article.html" class="text-accent font-medium hover:text-accent/80">Lire la suite →</a>
-                    </div>
-                </article>
-
-                <!-- Article 5 -->
-                <article class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-                    <img src="article/images/orelsan-festival.jpg" alt="Orelsan festival" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <div class="flex items-center text-sm text-gray-500 mb-2">
-                            <span>5 Mars 2024</span>
-                            <span class="mx-2">•</span>
-                            <span>Par Thomas Leroy</span>
-                        </div>
-                        <h2 class="text-xl font-bold text-primary mb-2">Orelsan en tête d'affiche du Festival de la Musique</h2>
-                        <p class="text-gray-600 mb-4">Le rappeur caennais sera la star du festival qui se tiendra cet été.</p>
-                        <a href="article.html" class="text-accent font-medium hover:text-accent/80">Lire la suite →</a>
-                    </div>
-                </article>
-
-                <!-- Article 6 -->
-                <article class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-                    <img src="article/images/plk-collaboration.jpg" alt="PLK collaboration" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <div class="flex items-center text-sm text-gray-500 mb-2">
-                            <span>3 Mars 2024</span>
-                            <span class="mx-2">•</span>
-                            <span>Par Lucas Moreau</span>
-                        </div>
-                        <h2 class="text-xl font-bold text-primary mb-2">PLK dévoile une collaboration surprise</h2>
-                        <p class="text-gray-600 mb-4">Le rappeur parisien a annoncé un featuring inattendu pour son prochain single.</p>
-                        <a href="article.html" class="text-accent font-medium hover:text-accent/80">Lire la suite →</a>
-                    </div>
-                </article>
-            </div>
+                    </article>
+                @endforeach
+                
 
             <!-- Pagination -->
             <!-- <div class="mt-12 flex justify-center">
