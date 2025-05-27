@@ -10,4 +10,10 @@ class ArticleController extends Controller
 
         return view('pages.actuality', compact('articles'));
     }
+
+    public function show($slug) {
+        $article = Article::with('category','tags','author')
+            ->where('slug', $slug)->first();
+        return view('pages.articleDetail', compact('article'));
+    }
 }

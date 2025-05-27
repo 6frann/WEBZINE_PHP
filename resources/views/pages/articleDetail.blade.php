@@ -219,17 +219,16 @@
             <!-- Article Content -->
             <article class="max-w-4xl mx-auto">
                 <header class="mb-8">
-                    <span class="article-tag text-sm px-4 py-1.5 bg-accent text-white rounded-full mb-4 inline-block transform hover:scale-105 transition-transform">À la une</span>
-                    <h1 class="text-4xl font-bold text-primary mb-4">Nekfeu de retour avec un nouvel album surprise, toutes les infos</h1>
+                    <span class="article-tag text-sm px-4 py-1.5 bg-accent text-white rounded-full mb-4 inline-block transform hover:scale-105 transition-transform">{{$article->category->name}}</span>
+                    <h1 class="text-4xl font-bold text-primary mb-4">{{$article->title}}</h1>
                     <div class="flex items-center text-gray-600 mb-6">
-                        <span class="mr-4">1 avril 2025</span>
-                        <span class="mr-4">Par Paul Dubois</span>
+                        <span class="mr-4">{{$article->created_at->format('d M Y')}}</span>
+                        <span class="mr-4">{{$article->author->name}}</span>
                     </div>
                     <div class="flex flex-wrap gap-2 mb-6">
-                        <span class="px-3 py-1 bg-accent/10 text-accent rounded-full text-sm font-medium">#Albums</span>
-                        <span class="px-3 py-1 bg-accent/10 text-accent rounded-full text-sm font-medium">#Nekfeu</span>
-                        <span class="px-3 py-1 bg-accent/10 text-accent rounded-full text-sm font-medium">#RapFrançais</span>
-                        <span class="px-3 py-1 bg-accent/10 text-accent rounded-full text-sm font-medium">#Musique</span>
+                        @foreach ($article->tags as $tag)
+                            <span class="px-3 py-1 bg-accent/10 text-accent rounded-full text-sm font-medium">#{{$tag->name}}</span>
+                        @endforeach
                     </div>
                     <div class="relative h-[500px] rounded-lg overflow-hidden mb-8">
                         <img src="article/images/tiako.jpg" alt="Nekfeu nouvel album" class="w-full h-full object-cover object-top">
@@ -238,26 +237,7 @@
 
                 <div class="prose prose-lg max-w-none">
                     <p class="lead text-xl text-gray-700 mb-6">
-                        Après trois ans d'absence, Nekfeu fait son grand retour avec un nouvel album surprise qui a déjà fait le buzz sur les réseaux sociaux. L'artiste a dévoilé son projet ce matin, créant la surprise chez ses fans.
-                    </p>
-
-                    <h2 class="text-2xl font-bold text-primary mt-8 mb-4">Un retour marqué par l'innovation</h2>
-                    <p>
-                        Le rappeur français, connu pour ses textes percutants et ses mélodies travaillées, semble avoir pris un nouveau virage artistique avec ce projet. Les premières réactions des fans sont très positives, saluant la maturité et l'évolution de l'artiste.
-                    </p>
-
-                    <h2 class="text-2xl font-bold text-primary mt-8 mb-4">Les collaborations qui font parler</h2>
-                    <p>
-                        L'album comprend plusieurs collaborations inattendues, dont certaines avec des artistes internationaux. Nekfeu a su s'entourer de talents variés pour créer un projet éclectique qui devrait marquer l'année 2025.
-                    </p>
-
-                    <blockquote class="border-l-4 border-accent pl-4 italic my-6">
-                        "Ce nouvel album représente un tournant dans ma carrière. J'ai voulu explorer de nouveaux horizons tout en restant fidèle à mon identité artistique."
-                    </blockquote>
-
-                    <h2 class="text-2xl font-bold text-primary mt-8 mb-4">Une tournée à venir</h2>
-                    <p>
-                        En plus de l'album, Nekfeu a annoncé une tournée qui débutera cet été. Les dates seront dévoilées dans les prochaines semaines, et les fans sont déjà nombreux à s'être inscrits sur la liste d'attente.
+                        {{$article->content}}
                     </p>
                 </div>
 
@@ -284,7 +264,7 @@
             </article>
 
             <!-- Related Articles -->
-            <section class="mt-16">
+            {{-- <section class="mt-16">
                 <h2 class="text-2xl font-bold text-primary mb-8">Articles similaires</h2>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                     <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:-translate-y-1 transition-transform duration-300">
@@ -329,7 +309,7 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> --}}
         </div>
     </main>
 

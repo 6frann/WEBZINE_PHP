@@ -13,10 +13,4 @@ class HomeController extends Controller
             'videos' => Video::latest()->take(4)->get(),
         ]);
     }
-
-    public function show($slug) {
-        $article = Article::with('category','tags','author')
-            ->where('slug', $slug)->first();
-        return view('test2', compact('article'));
-    }
 }
