@@ -237,7 +237,7 @@
 
                 <div class="prose prose-lg max-w-none">
                     <p class="lead text-xl text-gray-700 mb-6">
-                        {{$article->content}}
+                        {{strip_tags(html_entity_decode($article->content)), 100}}
                     </p>
                 </div>
 

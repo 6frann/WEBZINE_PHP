@@ -10,7 +10,7 @@
                                 <span class="article-tag text-sm px-4 py-1.5 bg-accent text-white rounded-full mb-4 inline-block transform hover:scale-105 transition-transform">{{$article->category->name}}</span>
                                 <h2 class="article-title text-5xl md:text-6xl xl:text-7xl text-white mb-4 leading-tight">{{$article->title}}</h2>
                             <div class="article-meta text-white/90 text-base">
-                                    <span class="mr-6">{{$article->created_at}}</span>
+                                {{-- <span class="mr-6">{{$article->created_at}}</span> --}}
                                 {{-- <span>Par Paul Dubois</span> --}}
                             </div>
                         </a>                   
