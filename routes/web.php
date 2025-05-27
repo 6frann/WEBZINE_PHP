@@ -29,6 +29,6 @@ Route::get('/accueil',[HomeController::class,'index']);
 Route::get('/actualites',[ArticleController::class,'index']);
 Route::get('/actualites/{slug}', [ArticleController::class, 'show'])->name('pages.articleDetail');
 
-// Route::get('/videos', [VideoController::class,'index']);
+Route::get('/videos', [VideoController::class,'index']);
 // Route::get('/videos/{slug}', [VideoController::class,'show'])->name('test3');
 
