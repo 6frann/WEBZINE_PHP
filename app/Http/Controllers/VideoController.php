@@ -8,7 +8,7 @@ class VideoController extends Controller
 {
     public function index() {
         $videos = Video::all();
-        return view('test3', compact('videos'));
+        return view('pages.video', compact('videos'));
     }
 
     public function show($slug) {
