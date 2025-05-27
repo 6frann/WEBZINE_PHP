@@ -13,6 +13,6 @@ class VideoController extends Controller
 
     public function show($slug) {
         $video = Video::where('slug', $slug)->first();
-        return view('test4', compact('video'));
+        return view('pages.videoDetail', compact('video'));
     }
 }
