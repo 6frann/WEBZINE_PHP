@@ -16,18 +16,20 @@
         <!-- News Card 1 -->
         @foreach ($articles as $article)
             <div   class="bg-white rounded-lg overflow-hidden shadow-sm hover:-translate-y-1 transition-transform duration-300">
-                <div class="h-[180px] overflow-hidden">
-                    <img src="{{ $article->image }}" alt="News 1" class="w-full h-full object-cover">
-                </div>
-                <div class="p-4">
-                    <span class="text-accent text-xs font-medium uppercase">{{$article->category->name}}</span>
-                    <h3 class="text-text-dark font-semibold text-base mt-2 mb-3">{{$article->title}}</h3>
-                    <div class="flex justify-between text-gray-500 text-xs">
-                        <span>{{$article->created_at}}</span>
-                        <span>{{$article->author->name}}</span>
+                <a href="{{route('pages.articleDetail',['slug'=>$article->slug])}}"> 
+                    <div class="h-[180px] overflow-hidden"> 
+                        <img src="{{ $article->image }}" alt="News 1" class="w-full h-full object-cover">
                     </div>
-                </div>
-            </div  >
+                    <div class="p-4">
+                        <span class="text-accent text-xs font-medium uppercase">{{$article->category->name}}</span>
+                        <h3 class="text-text-dark font-semibold text-base mt-2 mb-3">{{$article->title}}</h3>
+                        <div class="flex justify-between text-gray-500 text-xs">
+                            <span>{{$article->created_at->format('d M Y')}}</span>
+                            <span>{{$article->author->name}}</span>
+                        </div>
+                    </div>
+                </a>           
+            </div>
         @endforeach
     </div>
 </section>

@@ -231,7 +231,7 @@
                         @endforeach
                     </div>
                     <div class="relative h-[500px] rounded-lg overflow-hidden mb-8">
-                        <img src="article/images/tiako.jpg" alt="Nekfeu nouvel album" class="w-full h-full object-cover object-top">
+                        <img src="{{$article->image}}" alt="Nekfeu nouvel album" class="w-full h-full object-cover object-top">
                     </div>
                 </header>
 
