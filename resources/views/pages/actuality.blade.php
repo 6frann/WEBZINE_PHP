@@ -19,20 +19,22 @@
         <!-- Article 1 -->
         @foreach ($articles as $article)
             <article class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-                <img src="{{$article->image}}" alt="Nekfeu nouvel album" class="w-full h-48 object-cover">
-                <div class="p-6">
-                    <div class="flex items-center text-sm text-gray-500 mb-2">
-                        <span>{{$article->created_at->format('d M Y')}}</span>
-                        <span class="mx-2">•</span>
-                        <span>{{$article->author->name}}</span>
+                <a href="{{route('pages.articleDetail',['slug'=>$article->slug])}}" class="block">
+                    <img src="{{$article->image}}" alt="Nekfeu nouvel album" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500 mb-2">
+                            <span>{{$article->created_at->format('d M Y')}}</span>
+                            <span class="mx-2">•</span>
+                            <span>{{$article->author->name}}</span>
+                        </div>
+                        <h2 class="text-xl font-bold text-primary mb-2">{{$article->title}}</h2>
+                        <p class="text-gray-600 mb-4">{{ Str::limit(strip_tags(html_entity_decode($article->content)), 100) }}</p>
+                        <span class="text-accent font-medium hover:text-accent/80">Lire la suite →</span>
                     </div>
-                    <h2 class="text-xl font-bold text-primary mb-2">{{$article->title}}</h2>
-                    <p class="text-gray-600 mb-4">{{ Str::limit(strip_tags(html_entity_decode($article->content)), 100) }}</p>
-                    <a href="article.html" class="text-accent font-medium hover:text-accent/80">Lire la suite →</a>
-                </div>
+                </a>
             </article>
         @endforeach
-        
+    </div>
 
     <!-- Pagination -->
     <!-- <div class="mt-12 flex justify-center">
