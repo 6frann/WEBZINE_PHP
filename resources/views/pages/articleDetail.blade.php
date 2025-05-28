@@ -18,14 +18,14 @@
                 @endforeach
             </div>
             <div class="relative h-[500px] rounded-lg overflow-hidden mb-8">
-                <img src="{{$article->image}}" alt="Nekfeu nouvel album" class="w-full h-full object-cover object-top">
+                <img src="{{$article->image}}" alt="Nekfeu nouvel album" class="w-full h-full object-cover">
             </div>
         </header>
 
         <div class="prose prose-lg max-w-none">
-            <p class="lead text-xl text-gray-700 mb-6">
-                {{strip_tags(html_entity_decode($article->content)), 100}}
-            </p>
+            <div class="lead text-xl text-gray-700 mb-6">
+                {!! $article->content !!}
+            </div>
         </div>
 
         <div class="mt-12 border-t border-gray-200 pt-8">
