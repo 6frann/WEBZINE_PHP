@@ -55,9 +55,9 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'http://localhost'),
+    'url' => env('APP_URL', 'https://boulunpeu-70802062e2ff.herokuapp.com'),
 
-    'asset_url' => env('ASSET_URL'),
+    'asset_url' => env('ASSET_URL', 'https://boulunpeu-70802062e2ff.herokuapp.com'),
 
     /*
     |--------------------------------------------------------------------------
