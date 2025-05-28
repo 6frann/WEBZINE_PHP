@@ -27,7 +27,7 @@
                     <div class="p-4">
                         <h3 class="text-text-dark font-semibold text-base mb-2">{{$video->title}}</h3>
                         <div class="flex justify-between text-gray-500 text-xs">
-                            <span>{{$video->created_at}}</span>
+                            <span>{{$video->created_at->format('d M Y')}}</span>
                             {{-- <span>3.4M vues</span> --}}
                         </div>
                     </div>
