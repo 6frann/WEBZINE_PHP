@@ -1,7 +1,7 @@
 <footer class="bg-primary text-white py-8 mt-16">
     <div class="container mx-auto px-4">
         <div class="flex flex-col items-center text-center">
-            <img src="{{ asset('images/logo.PNG') }}" alt="logo" class="h-32 w-auto mb-4">
+            <img src="https://i.ibb.co/VWpJYmpF/3-A616-A23-26-BA-4-E6-B-B32-D-D79-D6-B66-D7-EC.png" alt="logo" class="h-32 w-auto mb-4">
             <p class="text-gray-400 mb-6 max-w-md">Toute l'actualité du rap français et international.</p>
             <div class="flex space-x-4 mb-6">
                 <a href="#" class="w-9 h-9 bg-white/10 rounded-full flex items-center justify-center hover:bg-accent transition-colors">
