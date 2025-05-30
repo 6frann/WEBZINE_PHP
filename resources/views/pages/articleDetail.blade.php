@@ -23,7 +23,7 @@
         </header>
 
         <div class="prose prose-lg max-w-none">
-            <div class=" text-gray-700 mb-6">
+            <div class="text-lg text-gray-700 mb-6">
                 {!! $article->content !!}
             </div>
         </div>
