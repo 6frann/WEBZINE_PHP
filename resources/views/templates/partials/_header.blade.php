@@ -2,7 +2,7 @@
     <div class="py-2 bg-black">
         <div class="container mx-auto px-4">
             <div class="flex justify-between items-center">
-                <a href="index.html" class="text-3xl font-display tracking-wider uppercase">
+                <a href="{{route('pages.home')}}" class="text-3xl font-display tracking-wider uppercase">
                     <img src="https://i.ibb.co/VWpJYmpF/3-A616-A23-26-BA-4-E6-B-B32-D-D79-D6-B66-D7-EC.png" alt="logo" class="h-20 w-auto">
                 </a>
                 <nav class="desktop-nav mt-4 flex-1">
