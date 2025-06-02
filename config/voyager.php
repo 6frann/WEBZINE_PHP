@@ -256,4 +256,6 @@ return [
            ],
        ]*/
     ],
+    'asset_path' => env('ASSET_URL', 'https://boulunpeu-70802062e2ff.herokuapp.com'),
+    'force_https' => true,
 ];

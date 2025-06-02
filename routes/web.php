@@ -14,21 +14,21 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
 // Route::get('/', function () {
 //     return view('welcome');
 // });
 
+Route::get('/',[HomeController::class,'index'])->name('pages.home');
+
+Route::get('/actualites',[ArticleController::class,'index'])->name('pages.actuality');
+Route::get('/actualites/{slug}', [ArticleController::class, 'show'])->name('pages.articleDetail');
+
+Route::get('/videos', [VideoController::class,'index'])->name('pages.videos');
+Route::get('/videos/{slug}', [VideoController::class,'show'])->name('pages.videoDetail');
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
 
-Route::get('/accueil',[HomeController::class,'index']);
 
-Route::get('/actualites',[ArticleController::class,'index']);
-Route::get('/actualites/{slug}', [ArticleController::class, 'show'])->name('pages.articleDetail');
-
-Route::get('/videos', [VideoController::class,'index']);
-// Route::get('/videos/{slug}', [VideoController::class,'show'])->name('test3');
 
