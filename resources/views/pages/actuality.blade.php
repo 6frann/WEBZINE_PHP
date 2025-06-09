@@ -25,7 +25,7 @@
                         <div class="flex items-center text-sm text-gray-500 mb-2">
                             <span>{{$article->created_at->format('d/m/y')}}</span>
                             <span class="mx-2">•</span>
-                            <span>{{$article->author->name}}</span>
+                            <span>Par {{$article->author->name}}</span>
                         </div>
                         <h2 class="text-xl font-bold text-primary mb-2">{{$article->title}}</h2>
                         <p class="text-gray-600 mb-4">{{ Str::limit(strip_tags(html_entity_decode($article->content)), 100) }}</p>

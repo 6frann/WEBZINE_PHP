@@ -10,7 +10,7 @@
             <h1 class="text-4xl font-bold text-primary mb-4">{{$article->title}}</h1>
             <div class="flex items-center text-gray-600 mb-6">
                 <span class="mr-4">{{$article->created_at->format('d/m/y')}}</span>
-                <span class="mr-4">{{$article->author->name}}</span>
+                <span class="mr-4">Par {{$article->author->name}}</span>
             </div>
             <div class="flex flex-wrap gap-2 mb-6">
                 @foreach ($article->tags as $tag)
