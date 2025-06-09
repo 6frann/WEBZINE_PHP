@@ -24,7 +24,7 @@
                         <span class="text-accent text-xs font-medium uppercase">{{$article->category->name}}</span>
                         <h3 class="text-text-dark font-semibold text-base mt-2 mb-3">{{$article->title}}</h3>
                         <div class="flex justify-between text-gray-500 text-xs">
-                            <span>{{$article->created_at->format('d M Y')}}</span>
+                            <span>{{$article->created_at->format('d/m/y')}}</span>
                             <span>{{$article->author->name}}</span>
                         </div>
                     </div>

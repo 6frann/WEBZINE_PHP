@@ -23,7 +23,7 @@
                     <img src="{{$article->image}}" alt="Nekfeu nouvel album" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <div class="flex items-center text-sm text-gray-500 mb-2">
-                            <span>{{$article->created_at->format('d M Y')}}</span>
+                            <span>{{$article->created_at->format('d/m/y')}}</span>
                             <span class="mx-2">•</span>
                             <span>{{$article->author->name}}</span>
                         </div>

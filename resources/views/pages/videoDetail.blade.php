@@ -9,7 +9,7 @@
             {{-- <span class="article-tag text-sm px-4 py-1.5 bg-accent text-white rounded-full mb-4 inline-block transform hover:scale-105 transition-transform">clip Officiel</span> --}}
             <h1 class="text-4xl font-bold text-primary mb-4">{{$video->title}}</h1>
             <div class="flex items-center text-gray-600 mb-6">
-                <span class="mr-4">{{$video->created_at->format('d M Y')}}</span>
+                <span class="mr-4">{{$video->created_at->format('d/m/y')}}</span>
                 {{-- <span class="mr-4">Par Jean Dupont</span> --}}
             </div>
             {{-- <div class="flex flex-wrap gap-2 mb-6">

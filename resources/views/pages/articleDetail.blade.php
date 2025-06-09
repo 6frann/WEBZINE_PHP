@@ -9,7 +9,7 @@
             <span class="article-tag text-sm px-4 py-1.5 bg-accent text-white rounded-full mb-4 inline-block transform hover:scale-105 transition-transform">{{$article->category->name}}</span>
             <h1 class="text-4xl font-bold text-primary mb-4">{{$article->title}}</h1>
             <div class="flex items-center text-gray-600 mb-6">
-                <span class="mr-4">{{$article->created_at->format('d M Y')}}</span>
+                <span class="mr-4">{{$article->created_at->format('d/m/y')}}</span>
                 <span class="mr-4">{{$article->author->name}}</span>
             </div>
             <div class="flex flex-wrap gap-2 mb-6">
@@ -23,7 +23,7 @@
         </header>
 
         <div class="prose prose-lg max-w-none">
-            <div class="text-lg text-gray-700 mb-6">
+            <div class="text-gray-700 mb-6">
                 {!! $article->content !!}
             </div>
         </div>
