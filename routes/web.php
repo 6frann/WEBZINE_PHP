@@ -2,6 +2,7 @@
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\VideoController;
+use App\Http\Controllers\ContactController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,6 +26,8 @@ Route::get('/actualites/{slug}', [ArticleController::class, 'show'])->name('page
 
 Route::get('/videos', [VideoController::class,'index'])->name('pages.videos');
 Route::get('/videos/{slug}', [VideoController::class,'show'])->name('pages.videoDetail');
+
+Route::get('/contact',[ContactController::class,'index'])->name('pages.contact');
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
