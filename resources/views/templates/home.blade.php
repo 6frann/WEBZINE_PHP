@@ -18,7 +18,7 @@
             </button>
         </div>
         <!-- Barre de recherche mobile -->
-        <!-- <div class="search-container-mobile relative h-10 rounded overflow-hidden mb-8">
+        <div class="search-container-mobile relative h-10 rounded overflow-hidden mb-8">
             <input type="text" 
                    placeholder="Rechercher..." 
                    class="w-full h-full py-2 px-4 bg-white/10 text-white placeholder-white/60 focus:outline-none">
@@ -27,7 +27,7 @@
                     <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
                 </svg>
             </button>
-        </div> -->
+        </div>
         
         {{-- nav --}}
         @include('templates.partials._nav')
