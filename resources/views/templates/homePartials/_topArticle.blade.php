@@ -30,7 +30,7 @@
                             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent"></div>
                             <div class="absolute bottom-0 left-0 right-0 p-6">
                                 <span class="inline-block bg-accent text-white text-sm font-medium px-3 py-1.5 rounded-full mb-3 uppercase transform hover:scale-105 transition-transform">
-                                    {{ $key == 0 ? 'Albums' : 'Concert' }}
+                                    {{ $article->category->name }}
                                 </span>
                                 <h3 class="text-xl font-bold text-white mb-2 leading-tight">{{ $article->title }}</h3>
                                 {{-- <div class="text-white/90 text-sm">{{ $article->created_at->format('d M Y') }}</div> --}}
