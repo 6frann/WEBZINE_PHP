@@ -4,8 +4,8 @@
             <h2 class="section-title text-primary mr-4">Dernières actualités</h2>
             <div class="flex-grow h-px bg-gray-300"></div>
         </div>
-        <a href="#" class="view-all-btn ml-6">
-            {{-- <span class="text">Voir tout</span> --}}
+        <a href="{{route('pages.actuality')}}" class="view-all-btn ml-6">
+            <span class="text">Voir tout</span>
             <span class="arrow-container">
                 <span class="arrow-line"></span>
                 <span class="arrow-head"></span>
