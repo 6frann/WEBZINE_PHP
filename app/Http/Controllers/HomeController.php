@@ -13,4 +13,13 @@ class HomeController extends Controller
             'videos' => Video::latest()->take(4)->get(),
         ]);
     }
+    public function search(Request $request){
+        $query = $request->input('query');
+
+        $articles = Article::where('title', 'like', "%{$query}%")
+            ->orWhere('content', 'like', "%{$query}%")
+            ->get();
+
+        return view('pages.search', compact('articles','query'));
+    }
 }
