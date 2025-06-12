@@ -19,14 +19,17 @@
         </div>
         <!-- Barre de recherche mobile -->
         <div class="search-container-mobile relative h-10 rounded overflow-hidden mb-8">
-            <input type="text" 
-                   placeholder="Rechercher..." 
-                   class="w-full h-full py-2 px-4 bg-white/10 text-white placeholder-white/60 focus:outline-none">
-            <button class="absolute right-3 top-1/2 -translate-y-1/2 text-white w-6 h-6 flex items-center justify-center hover:text-accent transition-colors">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
-                    <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
-                </svg>
-            </button>
+            <form action="{{ route('pages.search') }}" method="GET" class="w-full h-full">
+                <input type="text" 
+                       name="query" 
+                       placeholder="Rechercher..." 
+                       class="w-full h-full py-2 px-4 bg-white/10 text-white placeholder-white/60 focus:outline-none">
+                <button type="submit" class="absolute right-3 top-1/2 -translate-y-1/2 text-white w-6 h-6 flex items-center justify-center hover:text-accent transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
+                    </svg>
+                </button>
+            </form>
         </div>
         
         {{-- nav --}}
