@@ -20,6 +20,7 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/',[HomeController::class,'index'])->name('pages.home');
+Route::get('/search', [HomeController::class, 'search'])->name('pages.search');
 
 Route::get('/actualites',[ArticleController::class,'index'])->name('pages.actuality');
 Route::get('/actualites/{slug}', [ArticleController::class, 'show'])->name('pages.articleDetail');
