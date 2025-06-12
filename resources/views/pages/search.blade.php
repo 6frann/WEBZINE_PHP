@@ -4,9 +4,9 @@
 
 @section('content')
     <h1 class="text-2xl font-bold mb-6">Résultats de la recherche</h1>
-    @if($articles->isEmpty())
+    {{-- @if($articles->isEmpty())
         <p class="text-gray-600">Aucun résultat trouvé pour "{{ request('query') }}".</p>
-    @else
+    @else --}}
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <!-- Article 1 -->
             @foreach ($articles as $article)
@@ -27,5 +27,5 @@
                 </article>
             @endforeach
         </div>
-    @endif
+    {{-- @endif --}}
 @endsection
