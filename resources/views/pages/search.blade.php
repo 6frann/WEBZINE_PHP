@@ -3,7 +3,6 @@
 @section('title', 'Résultats de la recherche')
 
 @section('content')
-    <div class="container mx-auto px-4 py-8">
         <h1 class="text-2xl font-bold mb-6">Résultats de la recherche</h1>
         @if($articles->isEmpty())
             <p class="text-gray-600">Aucun résultat trouvé pour "{{ request('query') }}".</p>
