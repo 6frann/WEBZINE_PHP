@@ -20,7 +20,7 @@
                                 <span>Par {{$article->author->name}}</span>
                             </div>
                             <h2 class="text-xl font-bold text-primary mb-2">{{$article->title}}</h2>
-                            <p class="text-gray-600 mb-4">{!! Str::limit($article->content, 100) !!}</p>
+                            <p class="text-gray-600 mb-4">{{ Str::limit(strip_tags(html_entity_decode($article->content)), 100) }}</p>
                             <span class="text-accent font-medium hover:text-accent/80">Lire la suite →</span>
                         </div>
                     </a>
