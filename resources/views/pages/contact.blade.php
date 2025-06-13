@@ -13,7 +13,8 @@
                     <!-- Formulaire de contact -->
                     <div class="bg-white rounded-lg shadow-sm p-8">
                         <h2 class="text-xl font-bold text-primary mb-6">Envoyez-nous un message</h2>
-                        <form  class="space-y-6">
+                        <form action="{{route ('pages.send')}}" method="POST" class="space-y-6">
+                        @csrf
                             <div>
                                 <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Nom complet</label>
                                 <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent">
