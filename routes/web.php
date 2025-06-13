@@ -30,6 +30,8 @@ Route::get('/videos/{slug}', [VideoController::class,'show'])->name('pages.video
 
 Route::get('/contact',[ContactController::class,'index'])->name('pages.contact');
 
+Route::post('/email', [ContactController::class, 'send'])->name('pages.send');
+
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
