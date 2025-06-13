@@ -37,12 +37,14 @@
     </div>
 
     <!-- Pagination -->
-     <div class="mt-12 flex justify-center">
-        <nav class="flex items-center space-x-2">
-            <a href="#" class="px-4 py-2 bg-accent text-white rounded hover:bg-accent/90">1</a>
-            <a href="#" class="px-4 py-2 bg-gray-200 rounded hover:bg-gray-300">2</a>
-            <a href="#" class="px-4 py-2 bg-gray-200 rounded hover:bg-gray-300">3</a>
-            <a href="#" class="px-4 py-2 bg-gray-200 rounded hover:bg-gray-300">Suivant →</a>
-        </nav>
-    </div> 
+    <div class="mt-8 flex flex-col items-center space-y-2">
+    <div class="text-sm text-gray-500">
+        Affichage de {{ $articles->firstItem() }} à {{ $articles->lastItem() }} sur {{ $articles->total() }} résultats
+    </div>
+
+    <div>
+        {{ $articles->links('pagination::simple-tailwind') }}
+    </div>
+</div>
+
 @endsection
