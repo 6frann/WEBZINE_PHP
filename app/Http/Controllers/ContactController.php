@@ -19,5 +19,7 @@ class ContactController extends Controller
         ]);
 
         Mail::to('boulunpeu4000@gmail.com')->send(new ContactMessage($validated));
+
+        return redirect()->back()->with('success', 'Votre message a bien été envoyé !');
     }
 }

@@ -13,6 +13,11 @@
                     <!-- Formulaire de contact -->
                     <div class="bg-white rounded-lg shadow-sm p-8">
                         <h2 class="text-xl font-bold text-primary mb-6">Envoyez-nous un message</h2>
+                        @if (session('success'))
+                            <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mb-4">
+                                {{ session('success') }}
+                            </div>
+                        @endif
                         <form action="{{route ('pages.send')}}" method="POST" class="space-y-6">
                         @csrf
                             <div>
