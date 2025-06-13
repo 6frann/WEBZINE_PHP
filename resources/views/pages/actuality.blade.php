@@ -37,12 +37,12 @@
     </div>
 
     <!-- Pagination -->
-    <!-- <div class="mt-12 flex justify-center">
+     <div class="mt-12 flex justify-center">
         <nav class="flex items-center space-x-2">
             <a href="#" class="px-4 py-2 bg-accent text-white rounded hover:bg-accent/90">1</a>
             <a href="#" class="px-4 py-2 bg-gray-200 rounded hover:bg-gray-300">2</a>
             <a href="#" class="px-4 py-2 bg-gray-200 rounded hover:bg-gray-300">3</a>
             <a href="#" class="px-4 py-2 bg-gray-200 rounded hover:bg-gray-300">Suivant →</a>
         </nav>
-    </div> -->
+    </div> 
 @endsection
