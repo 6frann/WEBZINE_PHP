@@ -29,7 +29,6 @@ Route::get('/videos', [VideoController::class,'index'])->name('pages.videos');
 Route::get('/videos/{slug}', [VideoController::class,'show'])->name('pages.videoDetail');
 
 Route::get('/contact',[ContactController::class,'index'])->name('pages.contact');
-
 Route::post('/email', [ContactController::class, 'send'])->name('pages.send');
 
 Route::group(['prefix' => 'admin'], function () {
