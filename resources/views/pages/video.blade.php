@@ -1,6 +1,6 @@
 @extends('templates.home')
 
-@section('title', 'videos')
+@section('title', 'Videos')
 
 @section('content')
     <h1 class="text-3xl font-bold text-primary mb-8">Vidéos</h1>

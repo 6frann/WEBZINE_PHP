@@ -51,8 +51,27 @@
     </article>
 
     <!-- Related Articles -->
+    {{-- <a href="{{route('pages.category',['slug'=>$article->category->slug])}}" class="view-all-btn ml-6">
+        <span class="text">Voir tout</span>
+        <span class="arrow-container">
+            <span class="arrow-line"></span>
+            <span class="arrow-head"></span>
+        </span>
+    </a> --}}
     <section class="mt-16">
-        <h2 class="text-2xl font-bold text-primary mb-8">Articles similaires</h2>
+        <div class="flex items-center justify-between mb-6">
+            <div class="flex items-center flex-1">
+                <h2 class="section-title text-primary mr-4">Articles Similaire</h2>
+                <div class="flex-grow h-px bg-gray-300"></div>
+            </div>
+            <a href="{{route('pages.category',['slug'=>$article->category->slug])}}" class="view-all-btn ml-6">
+                <span class="text">Voir tout</span>
+                <span class="arrow-container">
+                    <span class="arrow-line"></span>
+                    <span class="arrow-head"></span>
+                </span>
+            </a>
+        </div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
             @foreach ($relatedArticles as $relatedArticle)
                 <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:-translate-y-1 transition-transform duration-300">

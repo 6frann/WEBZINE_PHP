@@ -1,6 +1,6 @@
 @extends('templates.home')
 
-@section('title', 'accueil')
+@section('title', 'Accueil')
 
 @section('content')
     @include('templates.homePartials._topArticle', ['articles' => $topArticles])
