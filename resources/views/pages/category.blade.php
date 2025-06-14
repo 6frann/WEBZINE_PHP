@@ -7,12 +7,19 @@
         Articles dans la catégorie : {{ $category->name }}
     </h1>
 
-    <div class="mb-8 flex flex-wrap gap-4">
-        <button class="px-4 py-2 bg-accent text-white rounded hover:bg-accent/90"><a href="{{route('pages.actuality')}}">Tout</a></button>
-        @foreach ($categories as $cat)
-            <button class="px-4 py-2 bg-gray-200 rounded hover:bg-gray-300"><a href="{{route('pages.category',['slug'=>$cat->slug]) }}">{{$cat->name}}</a></button>
-        @endforeach
-    </div>
+    @foreach ($categories as $cat)
+        <div class="mb-8 flex flex-wrap gap-4>
+            <a href="{{ route('pages.category', ['slug' => $cat->slug]) }}">
+                <button class="px-4 py-2 rounded 
+                    {{ (isset($category) && $category->slug === $cat->slug) 
+                        ? 'bg-accent text-white hover:bg-accent/90' 
+                        : 'bg-gray-200 hover:bg-gray-300' }}">
+                    {{ $cat->name }}
+                </button>
+            </a>
+        </div>
+        
+    @endforeach
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         @foreach ($articles as $article)
