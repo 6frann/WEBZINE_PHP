@@ -16,6 +16,13 @@ class ArticleController extends Controller
     public function show($slug) {
         $article = Article::with('category','tags','author')
             ->where('slug', $slug)->first();
-        return view('pages.articleDetail', compact('article'));
+
+        $relatedArticles = Article::with('author')
+            ->where('category_id', $article->category_id)
+            ->where('id', '!=', $article->id)
+            ->orderBy('created_at', 'desc')
+            ->take(3)
+            ->get();
+        return view('pages.articleDetail', compact('article', 'relatedArticles'));
     }
 }
