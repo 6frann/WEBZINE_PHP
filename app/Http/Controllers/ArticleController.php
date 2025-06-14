@@ -1,6 +1,7 @@
 <?php
 namespace App\Http\Controllers;
 use App\Models\Article;
+use App\Models\Category;
 use Illuminate\Http\Request;
 
 class ArticleController extends Controller
@@ -9,8 +10,9 @@ class ArticleController extends Controller
         $articles = Article::with('author')
         ->orderBy('created_at', 'desc')
         ->paginate(6);
-
-        return view('pages.actuality', compact('articles'));
+        $categories = Category::all();
+        
+        return view('pages.actuality', compact('articles', 'categories'));
     }
 
     public function show($slug) {
