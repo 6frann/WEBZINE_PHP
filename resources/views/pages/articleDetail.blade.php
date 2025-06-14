@@ -51,50 +51,27 @@
     </article>
 
     <!-- Related Articles -->
-     <section class="mt-16">
+    <section class="mt-16">
         <h2 class="text-2xl font-bold text-primary mb-8">Articles similaires</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:-translate-y-1 transition-transform duration-300">
-                <div class="h-[200px] overflow-hidden">
-                    <img src="/api/placeholder/300/200" alt="Article similaire 1" class="w-full h-full object-cover">
-                </div>
-                <div class="p-4">
-                    <span class="text-accent text-xs font-medium uppercase">Albums</span>
-                    <h3 class="text-text-dark font-semibold text-base mt-2 mb-3">SCH annonce la date de sortie de son prochain album</h3>
-                    <div class="flex justify-between text-gray-500 text-xs">
-                        <span>31 mars 2025</span>
-                        <span>Léa Martin</span>
+            @foreach ($relatedArticles as $relatedArticle)
+                <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:-translate-y-1 transition-transform duration-300">
+                    <a href="{{ route('pages.articleDetail', ['slug' => $relatedArticle->slug]) }}">
+                        <div class="h-[200px] overflow-hidden">
+                        <img src="{{$relatedArticle->image}}" alt="{{$relatedArticle->title}}" class="w-full h-full object-cover">
                     </div>
-                </div>
-            </div>
-
-            <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:-translate-y-1 transition-transform duration-300">
-                <div class="h-[200px] overflow-hidden">
-                    <img src="/api/placeholder/300/200" alt="Article similaire 2" class="w-full h-full object-cover">
-                </div>
-                <div class="p-4">
-                    <span class="text-accent text-xs font-medium uppercase">Interview</span>
-                    <h3 class="text-text-dark font-semibold text-base mt-2 mb-3">Laylow se confie sur son parcours artistique</h3>
-                    <div class="flex justify-between text-gray-500 text-xs">
-                        <span>29 mars 2025</span>
-                        <span>Sarah Dupont</span>
+                    <div class="p-4">
+                        <span class="text-accent text-xs font-medium uppercase">{{$relatedArticle->category->name}}</span>
+                        <h3 class="text-text-dark font-semibold text-base mt-2 mb-3">{{$relatedArticle->title}}</h3>
+                        <div class="flex justify-between text-gray-500 text-xs">
+                            <span>{{$relatedArticle->created_at->format('d/m/y')}}</span>
+                            <span>{{$relatedArticle->author->name}}</span>
+                        </div>
                     </div>
+                    </a>
                 </div>
-            </div>
-
-            <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:-translate-y-1 transition-transform duration-300">
-                <div class="h-[200px] overflow-hidden">
-                    <img src="/api/placeholder/300/200" alt="Article similaire 3" class="w-full h-full object-cover">
-                </div>
-                <div class="p-4">
-                    <span class="text-accent text-xs font-medium uppercase">Clips</span>
-                    <h3 class="text-text-dark font-semibold text-base mt-2 mb-3">Josman dévoile le clip de son nouveau single</h3>
-                    <div class="flex justify-between text-gray-500 text-xs">
-                        <span>28 mars 2025</span>
-                        <span>Thomas Blanc</span>
-                    </div>
-                </div>
-            </div>
+            @endforeach
+            
         </div>
     </section>
 @endsection

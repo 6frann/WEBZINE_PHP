@@ -17,7 +17,7 @@ class ArticleController extends Controller
         $article = Article::with('category','tags','author')
             ->where('slug', $slug)->first();
 
-        $relatedArticles = Article::with('author')
+        $relatedArticles = Article::with('author', 'category')
             ->where('category_id', $article->category_id)
             ->where('id', '!=', $article->id)
             ->orderBy('created_at', 'desc')
