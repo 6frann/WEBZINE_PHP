@@ -36,14 +36,13 @@
     </div>
 
     <!-- Pagination -->
-    <div class="mt-8 flex flex-col items-center space-y-2">
-    <div class="text-sm text-gray-500">
-        Affichage de {{ $articles->firstItem() }} à {{ $articles->lastItem() }} sur {{ $articles->total() }} résultats
+    <div class="mt-8 flex flex-col md:flex-row md:items-center md:justify-center gap-4">
+        <div class="text-sm text-gray-500">
+            Affichage de {{ $articles->firstItem() }} à {{ $articles->lastItem() }} sur {{ $articles->total() }} résultats
+        </div>
+        <div>
+            {{ $articles->links('pagination::simple-tailwind') }}
+        </div>
     </div>
-
-    <div>
-        {{ $articles->links('pagination::simple-tailwind') }}
-    </div>
-</div>
 
 @endsection
