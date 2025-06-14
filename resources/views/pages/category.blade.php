@@ -1,11 +1,18 @@
-{{-- @extends('templates.home')
+@extends('templates.home')
 
 @section('title', 'category->name')
 
-@section('content') --}}
-    <h2 class="text-xl font-bold mb-6">
-        {{-- Articles dans la catégorie : {{ $category->name }} --}}
-    </h2>
+@section('content')
+    <h1 class="text-3xl font-bold mb-6">
+        Articles dans la catégorie : {{ $category->name }}
+    </h1>
+
+    <div class="mb-8 flex flex-wrap gap-4">
+        <button class="px-4 py-2 bg-accent text-white rounded hover:bg-accent/90"><a href="{{route('pages.actuality')}}">Tout</a></button>
+        @foreach ($categories as $cat)
+            <button class="px-4 py-2 bg-gray-200 rounded hover:bg-gray-300"><a href="{{route('pages.category',['slug'=>$cat->slug]) }}">{{$cat->name}}</a></button>
+        @endforeach
+    </div>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         @foreach ($articles as $article)
@@ -18,4 +25,4 @@
         @endforeach
     </div>
 
-{{-- @endsection --}}
+@endsection

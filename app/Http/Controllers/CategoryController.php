@@ -12,7 +12,8 @@ class CategoryController extends Controller
         ->with('author')
         ->orderBy('created_at', 'desc')
         ->paginate(6);
+        $categories = Category::all();
         
-        return view('pages.category', compact('category', 'articles'));
+        return view('pages.category', compact('category', 'articles', 'categories'));
     }
 }

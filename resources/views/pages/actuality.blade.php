@@ -11,11 +11,9 @@
         @foreach ($categories as $cat)
             <button class="px-4 py-2 bg-gray-200 rounded hover:bg-gray-300"><a href="{{route('pages.category',['slug'=>$cat->slug]) }}">{{$cat->name}}</a></button>
         @endforeach
-        </div>
+    </div>
 
-        @include('pages.category')
-
-    {{-- <!-- Grille d'articles -->
+    <!-- Grille d'articles -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <!-- Article 1 -->
         @foreach ($articles as $article)
@@ -35,7 +33,7 @@
                 </a>
             </article>
         @endforeach
-    </div> --}}
+    </div>
 
     <!-- Pagination -->
     <div class="mt-8 flex flex-col items-center space-y-2">
