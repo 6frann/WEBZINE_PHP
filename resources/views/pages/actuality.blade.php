@@ -6,13 +6,13 @@
     <h1 class="text-3xl font-bold text-primary mb-8">Actualités</h1>
     
     <!-- Filtres -->
-    <!-- <div class="mb-8 flex flex-wrap gap-4">
+    <div class="mb-8 flex flex-wrap gap-4">
         <button class="px-4 py-2 bg-accent text-white rounded hover:bg-accent/90">Tout</button>
         <button class="px-4 py-2 bg-gray-200 rounded hover:bg-gray-300">News</button>
         <button class="px-4 py-2 bg-gray-200 rounded hover:bg-gray-300">Découvertes</button>
         <button class="px-4 py-2 bg-gray-200 rounded hover:bg-gray-300">Culture</button>
         <button class="px-4 py-2 bg-gray-200 rounded hover:bg-gray-300">Instant Boul</button>
-    </div> -->
+    </div>
 
     <!-- Grille d'articles -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
