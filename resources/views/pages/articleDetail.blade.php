@@ -51,7 +51,7 @@
     </article>
 
     <!-- Related Articles -->
-    {{-- <section class="mt-16">
+     <section class="mt-16">
         <h2 class="text-2xl font-bold text-primary mb-8">Articles similaires</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:-translate-y-1 transition-transform duration-300">
@@ -96,5 +96,5 @@
                 </div>
             </div>
         </div>
-    </section> --}}
+    </section>
 @endsection
