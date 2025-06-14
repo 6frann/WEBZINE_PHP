@@ -7,11 +7,11 @@
     
     <!-- Filtres -->
     <div class="mb-8 flex flex-wrap gap-4">
-        <button class="px-4 py-2 bg-accent text-white rounded hover:bg-accent/90">Tout</button>
-        <button class="px-4 py-2 bg-gray-200 rounded hover:bg-gray-300">News</button>
-        <button class="px-4 py-2 bg-gray-200 rounded hover:bg-gray-300">Découvertes</button>
-        <button class="px-4 py-2 bg-gray-200 rounded hover:bg-gray-300">Culture</button>
-        <button class="px-4 py-2 bg-gray-200 rounded hover:bg-gray-300">Instant Boul</button>
+        <button class="px-4 py-2 bg-accent text-white rounded hover:bg-accent/90"><a href="{{route('pages.actuality')}}">Tout</a></button>
+        <button class="px-4 py-2 bg-gray-200 rounded hover:bg-gray-300"><a href="">News</a></button>
+        <button class="px-4 py-2 bg-gray-200 rounded hover:bg-gray-300"><a href="">Découvertes</a></button>
+        <button class="px-4 py-2 bg-gray-200 rounded hover:bg-gray-300"><a href="">Culture</a></button>
+        <button class="px-4 py-2 bg-gray-200 rounded hover:bg-gray-300"><a href="">Instant Boul</a></button>
     </div>
 
     <!-- Grille d'articles -->
