@@ -1,7 +1,7 @@
 <section class="mb-12">
     <div class="flex items-center justify-between mb-6">
         <div class="flex items-center flex-1">
-            <h2 class="section-title text-primary mr-4">Derniers clips</h2>
+            <h2 class="section-title text-primary mr-4">Dernières vidéos</h2>
             <div class="flex-grow h-px bg-gray-300"></div>
         </div>
         <a href="{{route('pages.videos')}}" class="view-all-btn ml-6">
