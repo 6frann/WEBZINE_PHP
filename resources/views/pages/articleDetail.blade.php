@@ -42,7 +42,7 @@
             <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(request()->fullUrl()) }}" target="_blank" rel="noopener" title="Partager sur Facebook" class="w-9 h-9 bg-gray-300 rounded-full flex items-center justify-center hover:bg-accent transition-colors">
                 <!-- Icône Facebook minimaliste -->
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                    <text x="7" y="19" font-size="16" font-family="Arial" fill="currentColor">f</text>
+                    <path d="M16 8.5h-2a1 1 0 0 0-1 1V12h3l-.5 3H13v7h-3v-7H7v-3h3v-2.5A3.5 3.5 0 0 1 13.5 6H16v2.5z"/>
                 </svg>
             </a>
 
