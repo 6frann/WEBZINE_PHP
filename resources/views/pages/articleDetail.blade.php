@@ -6,7 +6,9 @@
     <!-- Article Content -->
     <article class="max-w-4xl mx-auto">
         <header class="mb-8">
-            <span class="article-tag text-sm px-4 py-1.5 bg-accent text-white rounded-full mb-4 inline-block transform hover:scale-105 transition-transform">{{$article->category->name}}</span>
+            <span class="article-tag text-sm px-4 py-1.5 bg-accent text-white rounded-full mb-4 inline-block">
+                {{$article->category->name}}
+            </span>
             <h1 class="text-4xl font-bold text-primary mb-4">{{$article->title}}</h1>
             <div class="flex items-center text-gray-600 mb-6">
                 <span class="mr-4">{{$article->created_at->format('d/m/y')}}</span>
