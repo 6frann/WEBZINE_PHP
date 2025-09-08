@@ -14,7 +14,7 @@
                             </a>
                         </li>
                         <li class="px-4">
-                            <a href="{{route('pages.actuality')}}" class="nav-link text-base py-2 hover:text-accent relative group">
+                            <a href="{{route('pages.articles.index')}}" class="nav-link text-base py-2 hover:text-accent relative group">
                                 Actualités
                                 <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full"></span>
                             </a>
