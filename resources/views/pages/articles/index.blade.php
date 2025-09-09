@@ -9,7 +9,7 @@
     <div class="mb-8 flex flex-wrap gap-4">
         <button class="px-4 py-2 bg-accent text-white rounded hover:bg-accent/90"><a href="{{route('pages.articles.index')}}">Tout</a></button>
         @foreach ($categories as $cat)
-            <button class="px-4 py-2 bg-gray-200 rounded hover:bg-gray-300"><a href="{{route('pages.category',['slug'=>$cat->slug]) }}">{{$cat->name}}</a></button>
+            <button class="px-4 py-2 bg-gray-200 rounded hover:bg-gray-300"><a href="{{route('pages.categories.show',['slug'=>$cat->slug]) }}">{{$cat->name}}</a></button>
         @endforeach
     </div>
 

@@ -8,11 +8,11 @@ class VideoController extends Controller
 {
     public function index() {
         $videos = Video::all();
-        return view('pages.video', compact('videos'));
+        return view('pages.videos.index', compact('videos'));
     }
 
     public function show($slug) {
         $video = Video::where('slug', $slug)->first();
-        return view('pages.videoDetail', compact('video'));
+        return view('pages.videos.show', compact('video'));
     }
 }

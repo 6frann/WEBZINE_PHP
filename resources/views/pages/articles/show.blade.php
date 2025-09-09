@@ -73,7 +73,7 @@
                 <h2 class="section-title text-primary mr-4">Articles Similaire</h2>
                 <div class="flex-grow h-px bg-gray-300"></div>
             </div>
-            <a href="{{route('pages.category',['slug'=>$article->category->slug])}}" class="view-all-btn ml-6">
+            <a href="{{route('pages.categories.show',['slug'=>$article->category->slug])}}" class="view-all-btn ml-6">
                 <span class="text">Voir tout</span>
                 <span class="arrow-container">
                     <span class="arrow-line"></span>
@@ -84,7 +84,7 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
             @foreach ($relatedArticles as $relatedArticle)
                 <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:-translate-y-1 transition-transform duration-300">
-                    <a href="{{ route('pages.articleDetail', ['slug' => $relatedArticle->slug]) }}">
+                    <a href="{{ route('pages.articles.show', ['slug' => $relatedArticle->slug]) }}">
                         <div class="h-[200px] overflow-hidden">
                         <img src="{{$relatedArticle->image}}" alt="{{$relatedArticle->title}}" class="w-full h-full object-cover">
                     </div>

@@ -11,7 +11,7 @@
             <!-- Article 1 -->
             @foreach ($articles as $article)
                 <article class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-                    <a href="{{route('pages.articleDetail',['slug'=>$article->slug])}}" class="block">
+                    <a href="{{route('pages.articles.show',['slug'=>$article->slug])}}" class="block">
                         <img src="{{$article->image}}" alt="Nekfeu nouvel album" class="w-full h-48 object-cover">
                         <div class="p-6">
                             <div class="flex items-center text-sm text-gray-500 mb-2">

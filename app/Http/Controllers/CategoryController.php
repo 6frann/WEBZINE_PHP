@@ -14,6 +14,6 @@ class CategoryController extends Controller
         ->paginate(6);
         $categories = Category::all();
         
-        return view('pages.category', compact('category', 'articles', 'categories'));
+        return view('pages.categories.show', compact('category', 'articles', 'categories'));
     }
 }
