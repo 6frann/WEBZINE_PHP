@@ -18,7 +18,7 @@
                                 {{ session('success') }}
                             </div>
                         @endif
-                        <form action="{{route ('pages.send')}}" method="POST" class="space-y-6">
+                        <form action="{{route ('contact.send')}}" method="POST" class="space-y-6">
                         @csrf
                             <div>
                                 <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Nom complet</label>

@@ -30,7 +30,7 @@ Route::get('/videos', [VideoController::class,'index'])->name('pages.videos.inde
 Route::get('/videos/{slug}', [VideoController::class,'show'])->name('pages.videos.show');
 
 Route::get('/contact',[ContactController::class,'index'])->name('pages.contact');
-Route::post('/email', [ContactController::class, 'send'])->name('pages.send');
+Route::post('/email', [ContactController::class, 'send'])->name('contact.send');
 
 Route::get('categorie/{slug}', [CategoryController::class, 'show'])->name('pages.categories.show');
 
