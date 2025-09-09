@@ -26,8 +26,8 @@ Route::get('/search', [HomeController::class, 'search'])->name('pages.search');
 Route::get('/actualites',[ArticleController::class,'index'])->name('pages.articles.index');
 Route::get('/actualites/{slug}', [ArticleController::class, 'show'])->name('pages.articles.show');
 
-Route::get('/videos', [VideoController::class,'index'])->name('pages.videos');
-Route::get('/videos/{slug}', [VideoController::class,'show'])->name('pages.videoDetail');
+Route::get('/videos', [VideoController::class,'index'])->name('pages.videos.index');
+Route::get('/videos/{slug}', [VideoController::class,'show'])->name('pages.videos.show');
 
 Route::get('/contact',[ContactController::class,'index'])->name('pages.contact');
 Route::post('/email', [ContactController::class, 'send'])->name('pages.send');

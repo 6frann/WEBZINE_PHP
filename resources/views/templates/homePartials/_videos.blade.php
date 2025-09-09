@@ -4,7 +4,7 @@
             <h2 class="section-title text-primary mr-4">Dernières vidéos</h2>
             <div class="flex-grow h-px bg-gray-300"></div>
         </div>
-        <a href="{{route('pages.videos')}}" class="view-all-btn ml-6">
+        <a href="{{route('pages.videos.index')}}" class="view-all-btn ml-6">
             <span class="text">Voir tout</span>
             <span class="arrow-container">
                 <span class="arrow-line"></span>
@@ -15,7 +15,7 @@
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         <!-- Video Card 1 -->
         @foreach ($videos as $video)
-            <a href="{{route('pages.videoDetail',['slug'=>$video->slug])}}">
+            <a href="{{route('pages.videos.show',['slug'=>$video->slug])}}">
                 <div class="bg-white rounded-lg overflow-hidden shadow-sm">
                     <div class="relative h-[180px] overflow-hidden">
                         <img src="{{$video->thumb}}" alt="Video 1" class="w-full h-full object-cover">
