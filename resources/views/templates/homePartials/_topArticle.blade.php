@@ -8,7 +8,7 @@
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
             <div class="lg:col-span-2">
                 <div class="relative h-[500px] rounded-md overflow-hidden group">
-                    <a href="{{ route('pages.articles.show', ['slug' => $mainArticle->slug]) }}">
+                    <a href="{{ route('articles.show', ['slug' => $mainArticle->slug]) }}">
                         <img src="{{ $mainArticle->image }}" alt="Article principal" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent"></div>
                         <div class="absolute bottom-0 left-0 right-0 p-8">
@@ -27,7 +27,7 @@
             <div class="flex flex-col lg:gap-6 md:flex-row lg:flex-col">
                 @foreach($secondaryArticles as $key => $article)
                     <div class="relative h-[240px] md:flex-1 rounded-md overflow-hidden group {{ $key == 1 ? 'mt-6 md:mt-0 lg:mt-0' : '' }}">
-                        <a href="{{ route('pages.articles.show', ['slug' => $article->slug]) }}">
+                        <a href="{{ route('articles.show', ['slug' => $article->slug]) }}">
                             <img src="{{ $article->image }}" alt="Article secondaire {{ $key+1 }}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent"></div>
                             <div class="absolute bottom-0 left-0 right-0 p-6">

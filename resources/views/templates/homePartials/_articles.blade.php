@@ -4,7 +4,7 @@
             <h2 class="section-title text-primary mr-4">Dernières actualités</h2>
             <div class="flex-grow h-px bg-gray-300"></div>
         </div>
-        <a href="{{route('pages.articles.index')}}" class="view-all-btn ml-6">
+        <a href="{{route('articles.index')}}" class="view-all-btn ml-6">
             <span class="text">Voir tout</span>
             <span class="arrow-container">
                 <span class="arrow-line"></span>
@@ -16,7 +16,7 @@
         <!-- News Card 1 -->
         @foreach ($articles as $article)
             <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:-translate-y-1 transition-transform duration-300 w-full">
-                <a href="{{route('pages.articles.show',['slug'=>$article->slug])}}" class="block">
+                <a href="{{route('articles.show',['slug'=>$article->slug])}}" class="block">
                     <div class="aspect-[16/9] overflow-hidden">
                         <img src="{{ $article->image }}" alt="News 1" class="w-full h-full object-cover">
                     </div>

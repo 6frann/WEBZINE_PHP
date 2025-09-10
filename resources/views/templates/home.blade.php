@@ -19,7 +19,7 @@
         </div>
         <!-- Barre de recherche mobile -->
         <div class="search-container-mobile relative h-10 rounded overflow-hidden mb-8">
-            <form action="{{ route('pages.search') }}" method="GET" class="w-full h-full">
+            <form action="{{ route('searchResult') }}" method="GET" class="w-full h-full">
                 <input type="text" 
                        name="query" 
                        placeholder="Rechercher..." 

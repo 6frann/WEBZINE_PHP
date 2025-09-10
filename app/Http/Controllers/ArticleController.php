@@ -12,7 +12,7 @@ class ArticleController extends Controller
         ->paginate(6);
         $categories = Category::all();
         
-        return view('pages.articles.index', compact('articles', 'categories'));
+        return view('articles.index', compact('articles', 'categories'));
     }
 
     public function show($slug) {
@@ -25,6 +25,6 @@ class ArticleController extends Controller
             ->orderBy('created_at', 'desc')
             ->take(3)
             ->get();
-        return view('pages.articles.show', compact('article', 'relatedArticles'));
+        return view('articles.show', compact('article', 'relatedArticles'));
     }
 }

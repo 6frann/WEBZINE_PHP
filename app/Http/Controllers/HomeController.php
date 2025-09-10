@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class HomeController extends Controller
 {
     public function index() {
-        return view('pages.home', [
+        return view('home', [
             'topArticles' => Article::with('category')->latest()->take(3)->get(),
             'articles' => Article::with('category', 'author')->latest()->skip(3)->take(4)->get(),
             'videos' => Video::latest()->take(4)->get(),
@@ -20,6 +20,6 @@ class HomeController extends Controller
             ->orWhere('content', 'like', "%{$query}%")
             ->get();
 
-        return view('pages.search', compact('articles','query'));
+        return view('searchResult', compact('articles','query'));
     }
 }
