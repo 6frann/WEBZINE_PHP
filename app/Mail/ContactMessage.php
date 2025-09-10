@@ -20,7 +20,7 @@ class ContactMessage extends Mailable
     {
         return $this->view('emails.contact')
                     ->with([
-                    'namem' => $this->data['name'],
+                    'name' => $this->data['name'],
                     'email' => $this->data['email'],
                     'subject' => $this->data['subject'],
                     'message' => $this->data['message'],
