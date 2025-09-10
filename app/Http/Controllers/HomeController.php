@@ -20,6 +20,6 @@ class HomeController extends Controller
             ->orWhere('content', 'like', "%{$query}%")
             ->get();
 
-        return view('searchResult', compact('articles','query'));
+        return view('articles.searchResults', compact('articles','query'));
     }
 }

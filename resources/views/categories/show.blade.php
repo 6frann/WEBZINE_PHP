@@ -8,9 +8,9 @@
     <h1 class="text-3xl font-bold text-primary mb-8">Actualités</h1>
 
     <div class="mb-8 flex flex-wrap gap-4">
-        <button class="px-4 py-2 rounded bg-gray-200 hover:bg-gray-300 text-gray-800"><a href="{{route('pages.articles.index')}}">Tout</a></button>
+        <button class="px-4 py-2 rounded bg-gray-200 hover:bg-gray-300 text-gray-800"><a href="{{route('articles.index')}}">Tout</a></button>
         @foreach ($categories as $cat)   
-            <a href="{{ route('pages.categories.show', ['slug' => $cat->slug]) }}">
+            <a href="{{ route('categories.show', ['slug' => $cat->slug]) }}">
                 <button class="px-4 py-2 rounded 
                     {{ (isset($category) && $category->slug === $cat->slug) 
                         ? 'bg-accent text-white hover:bg-accent/90' 
@@ -23,7 +23,7 @@
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         @foreach ($articles as $article)
             <article class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-                <a href="{{route('pages.articles.show',['slug'=>$article->slug])}}" class="block">
+                <a href="{{route('articles.show',['slug'=>$article->slug])}}" class="block">
                     <img src="{{$article->image}}" alt="Nekfeu nouvel album" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <div class="flex items-center text-sm text-gray-500 mb-2">
