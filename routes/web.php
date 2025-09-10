@@ -21,7 +21,7 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/',[HomeController::class,'index'])->name('home');
-Route::get('/search', [HomeController::class, 'search'])->name('searchResult');
+Route::get('/search', [HomeController::class, 'search'])->name('articles.searchResults');
 
 Route::get('/actualites',[ArticleController::class,'index'])->name('articles.index');
 Route::get('/actualites/{slug}', [ArticleController::class, 'show'])->name('articles.show');

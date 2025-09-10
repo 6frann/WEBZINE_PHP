@@ -35,7 +35,7 @@
                 </nav>
                 <!-- Barre de recherche -->
                 <div class="search-container collapsed relative h-10 rounded overflow-hidden">
-                    <form action="{{route('searchResult')}}">
+                    <form action="{{route('articles.searchResults')}}">
                             <input type="text"
                             name="query" 
                             placeholder="Rechercher..." 
