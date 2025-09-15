@@ -9,21 +9,21 @@ class ContactMessage extends Mailable
 {
     use Queueable, SerializesModels;
 
-    public $data;
+    public $validated;
 
-    public function __construct($data)
+    public function __construct($validated)
     {
-        $this->data = $data;
+        $this->validated = $validated;
     }
 
     public function build()
     {
-        return $this->view('emails.contact')
+        return $this->view('emails.message')
                     ->with([
-                    'name' => $this->data['name'],
-                    'email' => $this->data['email'],
-                    'subject' => $this->data['subject'],
-                    'message' => $this->data['message'],
+                    'name' => $this->validated['name'],
+                    'email' => $this->validated['email'],
+                    'subject' => $this->validated['subject'],
+                    'message' => $this->validated['message'],
                     ]);
     }
 }
