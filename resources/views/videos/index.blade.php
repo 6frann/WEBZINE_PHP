@@ -6,7 +6,7 @@
     <h1 class="text-3xl font-bold text-primary mb-8">Vidéos</h1>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         @foreach ($videos as $video)
-            <a href="{{route('videos.index',['slug'=> $video->slug])}}" class="block">
+            <a href="{{route('videos.show',['slug'=> $video->slug])}}" class="block">
                 <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:-translate-y-1 transition-transform duration-300">
                     <div class="relative h-[200px] overflow-hidden">
                         <img src="{{$video->thumb}}" alt="Video 1" class="w-full h-full object-cover">
