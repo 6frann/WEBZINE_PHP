@@ -49,7 +49,7 @@ Le prestataire est responsable de l’entièreté de la conception, du développ
 
 - Hébergement configuré et géré par le prestataire
 - Installation et configuration du serveur
-- Déploiement sur un sous-domaine dédié (ex : `boulunpeu.render.com`)
+- Déploiement sur un sous-domaine dédié (ex : `https://boulunpeu-70802062e2ff.herokuapp.com/`)
 - Accès permanent et sécurisé
 - Demandes de modifications de déploiement à adresser au prestataire
 
